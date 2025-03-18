@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://tuijianjichang.github.io/news/article-76370.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PYQT5(13)-基本窗口控件-拖曳与剪贴板</title>
+        <meta name="description" content="Drag与Drop 为用户提供的拖曳功能很直观，在很多桌面应用程序中，复制或移动对象都可以通过拖曳来完成。 基于MIME类型(Multipurpose Internet Mail Extension," />
+        <link rel="icon" href="/assets/website/img/clashstash/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="推荐机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tuijianjichang.github.io/news/article-76370.htm" />
+    <meta property="og:site_name" content="推荐机场节点官网" />
+    <meta property="og:title" content="PYQT5(13)-基本窗口控件-拖曳与剪贴板" />
+    <meta property="og:image" content="https://tuijianjichang.github.io/uploads/20240709/0e9603051ecc2d59086153a97b9981f6.webp" />
+        <meta property="og:release_date" content="2025-03-18T06:13:09" />
+    <meta property="og:updated_time" content="2025-03-18T06:13:09" />
+        <meta property="og:description" content="Drag与Drop 为用户提供的拖曳功能很直观，在很多桌面应用程序中，复制或移动对象都可以通过拖曳来完成。 基于MIME类型(Multipurpose Internet Mail Extension," />
+        
+    <link rel="stylesheet" href="/assets/website/css/clashstash/maicons.css">
+    <link rel="stylesheet" href="/assets/website/css/clashstash/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/clashstash/theme.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PYQT5(13)-基本窗口控件-拖曳与剪贴板">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVM5SLXX0V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SVM5SLXX0V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+            <div class="container">
+                                <a href="/" class="navbar-brand">推荐机场</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/free-nodes/">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/client.htm">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/news/">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-6">
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                        <h1 class="text-center">PYQT5(13)-基本窗口控件-拖曳与剪贴板</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h3>Drag与Drop</h3> <p>为用户提供的拖曳功能很直观，在很多桌面应用程序中，复制或移动对象都可以通过拖曳来完成。</p> <p>基于MIME类型(Multipurpose Internet Mail Extension, 多用途互联网邮件扩展类型)的拖曳数据传输是基于QDrag类的。QMimeData对象将关联的数据与其对应的MIME类型相关联。</p> <p>MIME类型的数据可以简单理解为互联网上的各种资源，比如文本、音频和视频资源等，互联网上的每一种资源都属于一种MIME类型的数据。</p> <p>MimeData类函数允许检测和使用方便的MIME类型。</p> <table border="1" cellpadding="1" cellspacing="1" style="width:700px;"> <tbody> <tr> <td style="background-color:#cccccc;">判断函数</td> <td style="background-color:#cccccc;">设置函数</td> <td style="background-color:#cccccc;">获取函数</td> <td style="background-color:#cccccc;">MIME类型</td> </tr> <tr> <td>hasText()</td> <td>text()</td> <td>setText()</td> <td>text/plain</td> </tr> <tr> <td>hasHtml()</td> <td>html()</td> <td>setHtml()</td> <td>text/html</td> </tr> <tr> <td>hasUrls()</td> <td>urls()</td> <td>setUrls()</td> <td>text/uri-list</td> </tr> <tr> <td>haslmage()</td> <td>imageData()</td> <td>setlmageData()</td> <td>image/*</td> </tr> <tr> <td>hasColor()</td> <td>colorData()</td> <td>setColorData()</td> <td>application/x-color</td> </tr> </tbody> </table> <p>许多QWidget对象都支持拖曳动作，允许拖曳数据的控件必须设置<strong>QWidget.setDragEnabled()</strong>为<strong>True</strong>。另外，控件应该响应拖曳事件，以便存储所拖曳的数据。</p> <p>常用的拖曳事件</p> <table border="1" cellpadding="1" cellspacing="1" style="width:700px;"> <tbody> <tr> <td>DragEnterEvent</td> <td>当执行一个拖曳控件操作，并且鼠标指针进入该控件时，这个事件将被触发。在这个事件中可以获得被操作的窗口控件，还可以有条件地接受或拒绝该拖曳操作</td> </tr> <tr> <td>DragMoveEvent</td> <td>在拖曳操作进行时会触发该事件</td> </tr> <tr> <td>DragLeaveEvent</td> <td>当执行一个拖曳控件操作，并且鼠标指针离开该控件时，这个事件将被触发</td> </tr> <tr> <td>DropEvent</td> <td>当拖曳操作在目标控件上被释放时，这个事件将被触发</td> </tr> </tbody> </table> <pre><code class="language-python">import sys from PyQt5.QtCore import * from PyQt5.QtGui import * from PyQt5.QtWidgets import *   class Combo(QComboBox):      def __init__(self, title, parent):         super(Combo, self).__init__(parent)         # 允许拖曳         self.setAcceptDrops(True)      def dragEnterEvent(self, e):         print(e)         if e.mimeData().hasText():             e.accept()         else:             e.ignore()      def dropEvent(self, e):         self.addItem(e.mimeData().text())   class Example(QWidget):     def __init__(self):         super(Example, self).__init__()         self.initUI()      def initUI(self):         lo = QFormLayout()         lo.addRow(QLabel("请把左边的文本拖拽到右边的下拉菜单中"))         edit = QLineEdit()         # 允许拖曳控件         edit.setDragEnabled(True)         com = Combo("Button", self)         lo.addRow(edit, com)         self.setLayout(lo)         self.setWindowTitle('简单拖拽例子')   if __name__ == '__main__':     app = QApplication(sys.argv)     ex = Example()     ex.show()     sys.exit(app.exec_())</code></pre> <p><img decoding="async" alt="" height="82" src="http://img.555519.xyz/uploads/20230112/953a3dab3c7ab663d84748e0afc9ed88.jpg"></p> <h3>QClipboard</h3> <p>QClipboard类提供了对系统剪贴板的访问，可以在应用程序之间复制和粘贴数据。它的操作类似于QDrag类，并使用类似的数据类型。</p> <p>QApplication类有一个静态方法clipboard()，它返回对剪贴板对象的引用。任何类型的MimeData都可以从剪贴板复制或粘贴。</p> <p>常用方法</p> <table border="1" cellpadding="1" cellspacing="1" style="width:700px;"> <tbody> <tr> <td>clear()</td> <td>清除剪贴板的内容</td> </tr> <tr> <td>setlmage()</td> <td>将QImage对象复制到剪贴板中</td> </tr> <tr> <td>setMimeData()</td> <td>将MIME数据设置为剪贴板</td> </tr> <tr> <td>setPixmap()</td> <td>从剪贴板中复制Pixmap对象</td> </tr> <tr> <td>setText()</td> <td>从剪贴板中复制文本</td> </tr> <tr> <td>text()</td> <td>从剪贴板中检索文本</td> </tr> </tbody> </table> <p>常用信号</p> <p>dataChanged：当剪贴板内容发生变化时，这个信号被发射</p> <pre><code class="language-python">import os import sys from PyQt5.QtCore import QMimeData from PyQt5.QtWidgets import (QApplication, QDialog, QGridLayout, QLabel, QPushButton) from PyQt5.QtGui import QPixmap   class Form(QDialog):     def __init__(self, parent=None):         super(Form, self).__init__(parent)         textCopyButton = QPushButton("&amp;Copy Text")         textPasteButton = QPushButton("Paste &amp;Text")         htmlCopyButton = QPushButton("C&amp;opy HTML")         htmlPasteButton = QPushButton("Paste &amp;HTML")         imageCopyButton = QPushButton("Co&amp;py Image")         imagePasteButton = QPushButton("Paste &amp;Image")         self.textLabel = QLabel("Original text")         self.imageLabel = QLabel()         self.imageLabel.setPixmap(QPixmap(os.path.join(             os.path.dirname(__file__), "images/clock.png")))         layout = QGridLayout()         layout.addWidget(textCopyButton, 0, 0)         layout.addWidget(imageCopyButton, 0, 1)         layout.addWidget(htmlCopyButton, 0, 2)         layout.addWidget(textPasteButton, 1, 0)         layout.addWidget(imagePasteButton, 1, 1)         layout.addWidget(htmlPasteButton, 1, 2)         layout.addWidget(self.textLabel, 2, 0, 1, 2)         layout.addWidget(self.imageLabel, 2, 2)         self.setLayout(layout)         textCopyButton.clicked.connect(self.copyText)         textPasteButton.clicked.connect(self.pasteText)         htmlCopyButton.clicked.connect(self.copyHtml)         htmlPasteButton.clicked.connect(self.pasteHtml)         imageCopyButton.clicked.connect(self.copyImage)         imagePasteButton.clicked.connect(self.pasteImage)         self.setWindowTitle("Clipboard 例子")      def copyText(self):         clipboard = QApplication.clipboard()         clipboard.setText("I've been clipped!")      def pasteText(self):         clipboard = QApplication.clipboard()         self.textLabel.setText(clipboard.text())      def copyImage(self):         clipboard = QApplication.clipboard()         clipboard.setPixmap(QPixmap(os.path.join(             os.path.dirname(__file__), "./images/python.png")))      def pasteImage(self):         clipboard = QApplication.clipboard()         self.imageLabel.setPixmap(clipboard.pixmap())      def copyHtml(self):         mimeData = QMimeData()         mimeData.setHtml("&lt;b&gt;Bold and &lt;font color=red&gt;Red&lt;/font&gt;&lt;/b&gt;")         clipboard = QApplication.clipboard()         clipboard.setMimeData(mimeData)      def pasteHtml(self):         clipboard = QApplication.clipboard()         mimeData = clipboard.mimeData()         if mimeData.hasHtml():             self.textLabel.setText(mimeData.html())   if __name__ == "__main__":     app = QApplication(sys.argv)     form = Form()     form.show()     sys.exit(app.exec_())</code></pre> <p><img decoding="async" alt="" height="103" src="http://img.555519.xyz/uploads/20230112/e8e376e2681e34f50020e2d0e24b21a7.jpg"></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-75696.htm">宠物用品批发进货市场（宠物用品店批发）</a></p>
+                                        <p>下一个：<a href="/news/article-76371.htm">中牧实业股份有限公司兽用疫苗生产基地（2020年中牧股份动物疫苗中标）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-15-free-v2ray-subscribe.htm" title="推荐机场 | 2月15日22.2M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址">推荐机场 | 2月15日22.2M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-57584.htm" title="猫咪免费领养中心官网（免费领养猫咪正规网站平台）">猫咪免费领养中心官网（免费领养猫咪正规网站平台）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-node-share-links.htm" title="推荐机场 | 3月16日23M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">推荐机场 | 3月16日23M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-69050.htm" title="动物医院名字有哪些（动物医院的标志是什么）">动物医院名字有哪些（动物医院的标志是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-61610.htm" title="中国农业大学动物医院公众号（中国农业大学动物医学院电话）">中国农业大学动物医院公众号（中国农业大学动物医学院电话）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-free-node-subscribe.htm" title="推荐机场 | 2月11日21.5M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址">推荐机场 | 2月11日21.5M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-57583.htm" title="青岛比较好的宠物医院（青岛比较好的宠物医院有哪些）">青岛比较好的宠物医院（青岛比较好的宠物医院有哪些）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-free-high-speed-nodes.htm" title="推荐机场 | 3月9日22.8M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">推荐机场 | 3月9日22.8M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-node-subscribe.htm" title="推荐机场 | 2月16日21.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">推荐机场 | 2月16日21.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-71676.htm" title="通过对抽象模型和概念模型的整合，细化项目整体流程">通过对抽象模型和概念模型的整合，细化项目整体流程</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </div> <!-- .page-section -->
+        <footer class="page-footer bg-image" style="background-image: url(/assets/website/img/clashstash/world_pattern.svg);">
+        <div class="container">
+            <p class="text-center" id="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <a href="/">推荐机场节点官网</a> 版权所有
+                <br />Powered by WordPress
+            </p>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/clashstash/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashstash/bootstrap.bundle.min.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
