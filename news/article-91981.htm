@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://tuijianjichang.github.io/news/article-91981.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>netty系列之:netty中的核心解码器json_在线工具</title>
+        <meta name="description" content="目录  简介 java中对json的支持 netty对json的解码 总结    程序和程序之间的数据传输方式有很多，可以通过二进制协议来传输，比较流行的像是thrift协议或者google的prot" />
+        <link rel="icon" href="/assets/website/img/clashstash/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="推荐机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://tuijianjichang.github.io/news/article-91981.htm" />
+    <meta property="og:site_name" content="推荐机场节点官网" />
+    <meta property="og:title" content="netty系列之:netty中的核心解码器json_在线工具" />
+    <meta property="og:image" content="https://tuijianjichang.github.io/uploads/20240709/e5e083b8aac6f1acfa0b09987b2fdbae.webp" />
+        <meta property="og:release_date" content="2025-04-09T09:17:21" />
+    <meta property="og:updated_time" content="2025-04-09T09:17:21" />
+        <meta property="og:description" content="目录  简介 java中对json的支持 netty对json的解码 总结    程序和程序之间的数据传输方式有很多，可以通过二进制协议来传输，比较流行的像是thrift协议或者google的prot" />
+        
+    <link rel="stylesheet" href="/assets/website/css/clashstash/maicons.css">
+    <link rel="stylesheet" href="/assets/website/css/clashstash/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/css/clashstash/theme.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="netty系列之:netty中的核心解码器json_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVM5SLXX0V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SVM5SLXX0V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+            <div class="container">
+                                <a href="/" class="navbar-brand">推荐机场</a>
+                                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/">首页</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/free-nodes/">免费节点</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/client.htm">客户端</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link" href="/news/">新闻资讯</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="page-banner">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-md-6">
+                        <nav aria-label="Breadcrumb">
+                            <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active">正文</li>
+                            </ul>
+                        </nav>
+                        <h1 class="text-center">netty系列之:netty中的核心解码器json_在线工具</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				</p> <div class="toc"> <div class="toc-container-header">目录</div> <ul> <li><a href="#%E7%AE%80%E4%BB%8B"  rel="nofollow">简介</a></li> <li><a href="#java%E4%B8%AD%E5%AF%B9json%E7%9A%84%E6%94%AF%E6%8C%81"  rel="nofollow">java中对json的支持</a></li> <li><a href="#netty%E5%AF%B9json%E7%9A%84%E8%A7%A3%E7%A0%81"  rel="nofollow">netty对json的解码</a></li> <li><a href="#%E6%80%BB%E7%BB%93"  rel="nofollow">总结</a></li> </ul> </div> </h1> <p>程序和程序之间的数据传输方式有很多，可以通过二进制协议来传输，比较流行的像是thrift协议或者google的protobuf。这些二进制协议可以实现数据的有效传输，并且通过二进制的形式可以节省数据的体积，在某些速度和效率优先的情况下是非常有效的。并且如果不同的编程语言之间的相互调用，也可以通过这种二进制的协议来实现。</p> <p>虽然二进制更加快速和有效，但是对于程序员来说不是很友好，因为一个人很难直接读取二进制文件，虽然也存在一些一些文本的数据传输方式，比如XML，但是XML的繁琐的标签导致了XML在使用中有诸多的不便。于是一种通用的文本文件传输格式json诞生了。</p> <p>能读到这篇文章的朋友肯定对json不陌生了，当然还有一些更加简洁的文件格式，比如YAML,感兴趣的朋友可以更深入的了解一下。</p> <p>这里我们想要讲的是netty对json的解码。</p> </h1> <p>在java中我们json的使用通常是将一个对象转换成为json进行数据传输，或者将接收到json进行解析，将其转换成为对象。</p> <p>可惜的是在JDK中并没有提供给一个好用的JSON工具，所以我们一般需要借助第三方的JSON包来实现Object和JSON之间的转换工作。</p> <p>通常使用的有google的GSON，阿里的FastJSON和jackson等。</p> <p>这里我们使用google的GSON来进行介绍。</p> <p>这里我们主要讲解的是java中对象和json的互相转换，所以GSON中其他更加强大的功能这里就不介绍了。</p> <p>首先我们创建一个JAVA对象，我们定义一个Student类，如下所示：</p> <pre><code>    static class Student {         String name;         String phone;         Integer age;          public Student(String name, String phone, Integer age) {             this.name = name;             this.phone = phone;             this.age = age;         }     } </code></pre> <p>这个类中，我们为Student定义了几个不同的属性和一个构造函数。接下来我们看下如何使用GSON来对这个对象进行JSON的转换：</p> <pre><code>        Student obj = new Student("tina","188888888",18);         Gson gson = new Gson();         String json = gson.toJson(obj);         System.out.println(json);         Student obj2 = gson.fromJson(json, Student.class);         System.out.println(obj2); </code></pre> <p>GSON使用起来非常简单，我们构建好Gson对象之后，直接调用它的toJson方法即可将对象转换成为json字符串。</p> <p>然后调用json的fromJson方法就可以将json字符串转换成为对象。</p> <p>上面的代码输出如下：</p> <pre><code>{"name":"tina","phone":"188888888","age":18} com.flydean.JsonTest$Student@4534b60d </code></pre> </h1> <p>netty为json提供了一个解码器叫做JsonObjectDecoder,先来看下JsonObjectDecoder的定义：</p> <pre><code>public class JsonObjectDecoder extends ByteToMessageDecoder </code></pre> <p>和前面讲解的base64,byte数组不同的是，JsonObjectDecoder继承的是ByteToMessageDecoder而不是MessageToMessageDecoder。</p> <p>这说明JsonObjectDecoder是直接从ByteBuf转换成为Json Object对象。</p> <p>我们知道JDK中并没有JSON这个对象，所有的对象都是从第三方包中引入的，netty并没有引入新的对象，所以netty中从Json中解析出来的对象还是一个ByteBuf对象，在这个ByteBuf中包含了一个Json对象。</p> <p>JsonObjectDecoder的解析逻辑是怎么样的呢？</p> <p>首先来看下JsonObjectDecoder中定义的4个state：</p> <pre><code>    private static final int ST_CORRUPTED = -1;     private static final int ST_INIT = 0;     private static final int ST_DECODING_NORMAL = 1;     private static final int ST_DECODING_ARRAY_STREAM = 2; </code></pre> <p>ST_INIT表示的是decode的初始状态，ST_CORRUPTED表示的是decode中出现的异常状态。</p> <p>ST_DECODING_NORMAL代表的是一个普通的json，如下所示：</p> <pre><code>{ 	"source": "web", 	"type": "product_info", 	"time": 1641967014440, 	"data": { 		"id": 30000084318055, 		"staging": false 	}, 	"dataId": "123456" } </code></pre> <p>ST_DECODING_ARRAY_STREAM代表的是一个数组，对于数组来说，数组也是一个对象，所以数组也可以用json表示,下面就是一个常见的json数组：</p> <pre><code>[ "Google", "Runoob", "Taobao" ] </code></pre> <p>JsonObjectDecoder的解码逻辑比较简单，它主要是读取ByteBuf中的数据，通过判断读取的数据和json中特有的大括号，中括号，逗号等分隔符来分割和解析json对象。</p> <p>要注意的是，JsonObjectDecoder要解码的ByteBuf中的消息应该是UTF-8编码格式的，为什么需要UTF-8格式呢？</p> <p>这是因为json中那些特有的分隔符，即使在UTF-8中也是用一个byte来存储的，这样我们在读取数据的过程中，可以通过读取的byte值和json的分隔符进行比较，从而来确定json中不同对象的界限。</p> <p>如果换成其他的编码方式，json中的分隔符可能会用多个byte来表示，这样对我们的解析就提高了难度，因为我们需要知道什么时候是分隔符的开始，什么时候是分隔符的结束。</p> <p>它的核心解码逻辑如下，首先从ByteBuf中读取一个byte：</p> <pre><code>byte c = in.getByte(idx); </code></pre> <p>然后通过调用<code>decodeByte(c, in, idx);</code> 来判断当前的位置是开括号，还是闭括号，是在一个对象的字符串中，还是一个新的对象字符串。</p> <p>首先需要对当前的state做一个判断，state判断调用的是initDecoding方法：</p> <pre><code>    private void initDecoding(byte openingBrace) {         openBraces = 1;         if (openingBrace == '[' &amp;&amp; streamArrayElements) {             state = ST_DECODING_ARRAY_STREAM;         } else {             state = ST_DECODING_NORMAL;         }     } </code></pre> <p>接着就是对当前的state和自定义的4个状态进行比较，如果是普通的json对象，并且对象已经是闭括号状态，说明该对象已经读取完成，可以将其进行转换并输出了：</p> <pre><code> if (state == ST_DECODING_NORMAL) {                 decodeByte(c, in, idx);                 if (openBraces == 0) {                     ByteBuf json = extractObject(ctx, in, in.readerIndex(), idx + 1 - in.readerIndex());                     if (json != null) {                         out.add(json);                     }     ... </code></pre> <p>如果state表示目前是一个数组对象，数组对象中可能包含多个对象，这些对象是通过逗号来区分的。逗号之间还可能会有空格，所以需要对这些数据进行特殊判断和处理，如下所示：</p> <pre><code>else if (state == ST_DECODING_ARRAY_STREAM) {                 decodeByte(c, in, idx);                  if (!insideString &amp;&amp; (openBraces == 1 &amp;&amp; c == ',' || openBraces == 0 &amp;&amp; c == ']')) {                     for (int i = in.readerIndex(); Character.isWhitespace(in.getByte(i)); i++) {                         in.skipBytes(1);                     }                     int idxNoSpaces = idx - 1;                     while (idxNoSpaces &gt;= in.readerIndex() &amp;&amp; Character.isWhitespace(in.getByte(idxNoSpaces))) {                         idxNoSpaces--;                     }                     ByteBuf json = extractObject(ctx, in, in.readerIndex(), idxNoSpaces + 1 - in.readerIndex());                     if (json != null) {                         out.add(json);                     }     .... </code></pre> <p>最后将解析出来的json对象放入byteBuf的out list中，整个解析到此结束。</p> </h1> <p>以上就是netty中json核心解码器JsonObjectDecoder的使用，它的本质是通过判断json对象中的分割符来分割多个json字符串，然后将分割后的json字符串存入ByteBuf中输出。</p> <p>看到这里，大家可能会疑惑了，decoder不是和encoder一起出现的吗？为什么netty中只有JsonObjectDecoder,而没有JsonObjectEncoder呢？</p> <p>事实上，这里的Json对象就是一个包含Json字符的字符串，这个字符串被写入到ByteBuf中，所以这里并不需要特殊的encoder。</p> <blockquote> <p>本文已收录于 <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://www.flydean.com/14-3-netty-codec-json/"  target="_blank"  rel="nofollow">http://www.flydean.com/14-3-netty-codec-json/</a></p> <p>最通俗的解读，最深刻的干货，最简洁的教程，众多你不知道的小技巧等你来发现！</p> <p>欢迎关注我的公众号:「程序那些事」,懂技术，更懂你！</p> </blockquote> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-91261.htm">养狗对家庭风水好吗（狗看到阴气重的人的后果）</a></p>
+                                        <p>下一个：<a href="/news/article-91986.htm">给动物注射疫苗 给动物注射疫苗产生的免疫属于什么免疫</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-89755.htm" title="猫咪疫苗一共要打几针多少钱驱虫（猫咪疫苗要打几针?）">猫咪疫苗一共要打几针多少钱驱虫（猫咪疫苗要打几针?）</a></li>
+                        <li class="py-2"><a href="/news/article-77037.htm" title="MySQL数据库之数据表操作_Mysql">MySQL数据库之数据表操作_Mysql</a></li>
+                        <li class="py-2"><a href="/news/article-80455.htm" title="宠物粮食加工厂加盟电话多少啊 宠物粮食加工厂加盟电话多少啊">宠物粮食加工厂加盟电话多少啊 宠物粮食加工厂加盟电话多少啊</a></li>
+                        <li class="py-2"><a href="/news/article-67754.htm" title="动物医院有限公司官网招聘 动物医院有限公司官网招聘信息">动物医院有限公司官网招聘 动物医院有限公司官网招聘信息</a></li>
+                        <li class="py-2"><a href="/news/article-83988.htm" title="动物疫苗证在哪里办的 动物疫苗证在哪里办的啊">动物疫苗证在哪里办的 动物疫苗证在哪里办的啊</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-free-subscribe-node.htm" title="推荐机场 | 4月4日18.5M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址">推荐机场 | 4月4日18.5M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-77038.htm" title="打动物疫苗有什么过敏反应症状吗（动物打过疫苗咬人会对人有影响吗）">打动物疫苗有什么过敏反应症状吗（动物打过疫苗咬人会对人有影响吗）</a></li>
+                        <li class="py-2"><a href="/news/article-73000.htm" title="HTML URL 编码转换表">HTML URL 编码转换表</a></li>
+                        <li class="py-2"><a href="/news/article-68397.htm" title="动物疫苗打一次管多长时间啊多少钱一针（动物注射疫苗）">动物疫苗打一次管多长时间啊多少钱一针（动物注射疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-88303.htm" title="领养宠物麻烦吗现在（领养宠物麻烦吗现在多少钱）">领养宠物麻烦吗现在（领养宠物麻烦吗现在多少钱）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </div> <!-- .page-section -->
+        <footer class="page-footer bg-image" style="background-image: url(/assets/website/img/clashstash/world_pattern.svg);">
+        <div class="container">
+            <p class="text-center" id="copyright">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">推荐机场节点官网</a> 版权所有
+                <br />Powered by WordPress
+            </p>
+        </div>
+    </footer>
+    <script src="/assets/website/js/frontend/clashstash/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashstash/bootstrap.bundle.min.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
