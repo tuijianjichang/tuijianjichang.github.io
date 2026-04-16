@@ -265,34 +265,19 @@ A4：在应用内进入“帮助与反馈”，选择在线客服或提交问题
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 节点使用 WebSocket + TLS 时应注意哪些参数？</h5></div>
-    <div class="panel-body">
-        需确保路径（path）与主机名（host）匹配服务器配置，TLS 证书有效，端口与防火墙设置开放。建议开启 mux 与 keepalive 优化连接稳定性，并定期测试延迟避免 CDN 缓存导致连接异常。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何实现智能分流？</h5></div>
-    <div class="panel-body">
-        PassWall2 通过自定义规则文件控制流量走向。可根据目标域名、国家或 IP 范围自动判断走代理或直连。用户还能加载社区规则，实现类似 Clash 的高效路由分流。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 全局与规则代理如何选择？</h5></div>
-    <div class="panel-body">
-        全局代理将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，用户可根据需求灵活选择模式。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 分流规则如何优化游戏体验？</h5></div>
-    <div class="panel-body">
-        QuantumultX 可按端口、协议或应用设置分流规则，将游戏流量走低延迟节点。结合策略组自动切换，可保证游戏连接稳定，减少掉线和延迟，提高流畅度。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 在路由器上使用 TUN 模式会有什么影响？</h5></div>
     <div class="panel-body">
         启用 TUN 模式会拦截并转发路由器上全部或选定流量，这会增加路由器 CPU 与内存负担，可能影响路由器其他服务表现。建议在性能足够的设备上启用，或仅对特定设备/端口进行分流。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的规则订阅更新有哪些注意事项？</h5></div>
+    <div class="panel-heading"><h5>Vmess 节点使用 WebSocket + TLS 时应注意哪些参数？</h5></div>
     <div class="panel-body">
-        Clash 订阅更新需保证网络畅通，规则文件格式正确，并与客户端版本兼容。建议定期更新规则以获得最新节点和分流规则，同时注意避免频繁刷新造成性能问题。<hr />    </div>
+        需确保路径（path）与主机名（host）匹配服务器配置，TLS 证书有效，端口与防火墙设置开放。建议开启 mux 与 keepalive 优化连接稳定性，并定期测试延迟避免 CDN 缓存导致连接异常。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 全局与规则代理如何选择？</h5></div>
+    <div class="panel-body">
+        全局代理将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，用户可根据需求灵活选择模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 策略组如何提升游戏和视频体验？</h5></div>
@@ -305,14 +290,29 @@ A4：在应用内进入“帮助与反馈”，选择在线客服或提交问题
         SSR 的协议插件可以增加流量的伪装特性，模拟常见协议或浏览器行为，从而降低被识别和封锁的风险。这对不稳定网络或高封锁环境尤其有帮助。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>如何配置 Clash 以支持局域网内设备共享代理？</h5></div>
+    <div class="panel-body">
+        启用 Clash 的 HTTP/SOCKS5 本地监听并在局域网设备上设置该代理地址为网关；若使用 TUN 模式需配合路由器或透明代理实现全局共享，注意开启访问控制避免未经授权的外部访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的规则订阅更新有哪些注意事项？</h5></div>
+    <div class="panel-body">
+        Clash 订阅更新需保证网络畅通，规则文件格式正确，并与客户端版本兼容。建议定期更新规则以获得最新节点和分流规则，同时注意避免频繁刷新造成性能问题。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名为什么重要？</h5></div>
     <div class="panel-body">
         伪装域名必须真实可访问且证书有效，以使流量看起来像普通 HTTPS 请求。正确配置可以降低被封锁和 DPI 检测风险，提高节点安全性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何配置 Clash 以支持局域网内设备共享代理？</h5></div>
+    <div class="panel-heading"><h5>QuantumultX 分流规则如何优化游戏体验？</h5></div>
     <div class="panel-body">
-        启用 Clash 的 HTTP/SOCKS5 本地监听并在局域网设备上设置该代理地址为网关；若使用 TUN 模式需配合路由器或透明代理实现全局共享，注意开启访问控制避免未经授权的外部访问。    </div>
+        QuantumultX 可按端口、协议或应用设置分流规则，将游戏流量走低延迟节点。结合策略组自动切换，可保证游戏连接稳定，减少掉线和延迟，提高流畅度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何实现智能分流？</h5></div>
+    <div class="panel-body">
+        PassWall2 通过自定义规则文件控制流量走向。可根据目标域名、国家或 IP 范围自动判断走代理或直连。用户还能加载社区规则，实现类似 Clash 的高效路由分流。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -341,16 +341,16 @@ A4：在应用内进入“帮助与反馈”，选择在线客服或提交问题
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-3-13-free-node-subscribe-links.htm" title="推荐机场 | 3月13日20M/S|免费VPN/Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点链接地址">推荐机场 | 3月13日20M/S|免费VPN/Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-25-node-share.htm" title="推荐机场 | 3月25日20.4M/S|免费VPN/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点链接地址">推荐机场 | 3月25日20.4M/S|免费VPN/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-16-free-node-subscribe-links.htm" title="推荐机场 | 4月16日18.5M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址">推荐机场 | 4月16日18.5M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-12-free-subscribe-node.htm" title="推荐机场 | 4月12日22.7M/S|免费VPN/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址">推荐机场 | 4月12日22.7M/S|免费VPN/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-10-clash-v2ray-ss-ssr.htm" title="推荐机场 | 4月10日21.1M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点免费节点链接地址">推荐机场 | 4月10日21.1M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-18-free-v2ray-subscribe.htm" title="推荐机场 | 3月18日19.9M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/V2ray节点免费节点链接地址">推荐机场 | 3月18日19.9M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/V2ray节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-26-free-high-speed-nodes.htm" title="推荐机场 | 3月26日18.7M/S|免费VPN/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址">推荐机场 | 3月26日18.7M/S|免费VPN/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-6-free-v2ray-subscribe.htm" title="推荐机场 | 3月6日19.2M/S|免费VPN/Trojan节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点免费节点链接地址">推荐机场 | 3月6日19.2M/S|免费VPN/Trojan节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-28-free-subscribe-node.htm" title="推荐机场 | 3月28日19.4M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点免费节点链接地址">推荐机场 | 3月28日19.4M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-10-free-node-subscribe-links.htm" title="推荐机场 | 3月10日21.3M/S|免费VPN/V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址">推荐机场 | 3月10日21.3M/S|免费VPN/V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-9-node-share.htm" title="推荐机场 | 3月9日20.6M/S|免费VPN/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点免费节点链接地址">推荐机场 | 3月9日20.6M/S|免费VPN/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-8-clash-v2ray-ss-ssr.htm" title="推荐机场 | 3月8日19.9M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Trojan节点免费节点链接地址">推荐机场 | 3月8日19.9M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Trojan节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-15-free-subscribe-node.htm" title="推荐机场 | 4月15日20.5M/S|免费VPN/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点免费节点链接地址">推荐机场 | 4月15日20.5M/S|免费VPN/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-29-free-subscribe-node.htm" title="推荐机场 | 3月29日23M/S|免费VPN/Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址">推荐机场 | 3月29日23M/S|免费VPN/Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-11-free-node-subscribe-links.htm" title="推荐机场 | 3月11日20M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点免费节点链接地址">推荐机场 | 3月11日20M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-20-free-v2ray.htm" title="推荐机场 | 3月20日20.7M/S|免费VPN/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/Trojan节点免费节点链接地址">推荐机场 | 3月20日20.7M/S|免费VPN/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/Trojan节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-14-free-subscribe-node.htm" title="推荐机场 | 3月14日18.2M/S|免费VPN/Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点链接地址">推荐机场 | 3月14日18.2M/S|免费VPN/Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -362,7 +362,7 @@ A4：在应用内进入“帮助与反馈”，选择在线客服或提交问题
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
