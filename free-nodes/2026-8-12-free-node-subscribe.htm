@@ -275,9 +275,14 @@ A4: 包括Shadowsocks、Vmess、HTTP、SOCKS5等，支持丰富多样，满足�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的节点测速结果会自动更新吗？</h5></div>
+    <div class="panel-heading"><h5>SSR 混淆方式如何提高抗封锁能力？</h5></div>
     <div class="panel-body">
-        PassWall2 可设置定期自动测速节点，更新延迟和可用性。结合策略组自动选择最优节点，可确保用户使用网络时始终连接到速度最快、最稳定的节点。<hr />    </div>
+        SSR 混淆可将流量伪装成正常 HTTPS 或 HTTP 数据，降低被 DPI 检测风险。合理选择协议和混淆参数组合，可以提高节点稳定性和长期可用性，保证科学上网体验顺畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持节点手动排序？</h5></div>
+    <div class="panel-body">
+        支持。用户可以根据延迟或使用需求手动排序节点顺序，结合策略组和规则文件实现基本分流管理。虽然不支持自动订阅更新，但满足轻量用户的节点管理需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 协议的动态端口功能是什么？</h5></div>
@@ -285,9 +290,19 @@ A4: 包括Shadowsocks、Vmess、HTTP、SOCKS5等，支持丰富多样，满足�
         VMess 支持动态端口（port hopping）功能，能在一定范围内自动变更通信端口。此机制可有效防止防火墙基于端口的封锁策略，提高节点长期稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 的节点测速结果会自动更新吗？</h5></div>
+    <div class="panel-body">
+        PassWall2 可设置定期自动测速节点，更新延迟和可用性。结合策略组自动选择最优节点，可确保用户使用网络时始终连接到速度最快、最稳定的节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式在高并发环境中表现如何？</h5></div>
     <div class="panel-body">
         XTLS 模式减少握手和加密开销，提高吞吐量和 CPU 利用率。在高并发环境下，能够保持连接稳定，适合游戏、视频和高频请求的网络场景，提高整体性能。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 如何提升网速？</h5></div>
+    <div class="panel-body">
+        Hysteria2 利用 QUIC 协议的低延迟特性，并通过自适应拥塞控制算法在高丢包网络下维持高速连接。配置合适的带宽参数与 TLS 证书，可显著提升跨境访问速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名为什么重要？</h5></div>
@@ -305,24 +320,9 @@ A4: 包括Shadowsocks、Vmess、HTTP、SOCKS5等，支持丰富多样，满足�
         Clash 支持定期测速节点延迟和丢包率，将节点状态显示在客户端。结合策略组，可以自动选择健康节点进行访问，避免访问高延迟或失效节点，提高网络稳定性和效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 混淆方式如何提高抗封锁能力？</h5></div>
-    <div class="panel-body">
-        SSR 混淆可将流量伪装成正常 HTTPS 或 HTTP 数据，降低被 DPI 检测风险。合理选择协议和混淆参数组合，可以提高节点稳定性和长期可用性，保证科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
     <div class="panel-body">
-        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持节点手动排序？</h5></div>
-    <div class="panel-body">
-        支持。用户可以根据延迟或使用需求手动排序节点顺序，结合策略组和规则文件实现基本分流管理。虽然不支持自动订阅更新，但满足轻量用户的节点管理需求。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 如何提升网速？</h5></div>
-    <div class="panel-body">
-        Hysteria2 利用 QUIC 协议的低延迟特性，并通过自适应拥塞控制算法在高丢包网络下维持高速连接。配置合适的带宽参数与 TLS 证书，可显著提升跨境访问速度。    </div>
+        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -370,16 +370,16 @@ A4: 包括Shadowsocks、Vmess、HTTP、SOCKS5等，支持丰富多样，满足�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-7-28-node-share.htm" title="推荐机场 | 7月28日22.5M/S|免费VPN/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点免费节点链接地址">推荐机场 | 7月28日22.5M/S|免费VPN/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-13-node-share-links.htm" title="推荐机场 | 7月13日20.9M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点免费节点链接地址">推荐机场 | 7月13日20.9M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-node-share.htm" title="推荐机场 | 8月14日20.6M/S|免费VPN/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点免费节点链接地址">推荐机场 | 8月14日20.6M/S|免费VPN/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-17-node-share-links.htm" title="推荐机场 | 7月17日21.3M/S|免费VPN/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址">推荐机场 | 7月17日21.3M/S|免费VPN/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-27-clash-v2ray-ss-ssr.htm" title="推荐机场 | 7月27日21.2M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址">推荐机场 | 7月27日21.2M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-14-free-v2ray-subscribe.htm" title="推荐机场 | 7月14日18.1M/S|免费VPN/Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点免费节点链接地址">推荐机场 | 7月14日18.1M/S|免费VPN/Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-2-free-subscribe-node.htm" title="推荐机场 | 8月2日20.3M/S|免费VPN/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址">推荐机场 | 8月2日20.3M/S|免费VPN/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-4-node-share.htm" title="推荐机场 | 8月4日21.6M/S|免费VPN/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点免费节点链接地址">推荐机场 | 8月4日21.6M/S|免费VPN/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-25-free-v2ray.htm" title="推荐机场 | 7月25日18.1M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点免费节点链接地址">推荐机场 | 7月25日18.1M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-20-node-share.htm" title="推荐机场 | 7月20日19.3M/S|免费VPN/V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址">推荐机场 | 7月20日19.3M/S|免费VPN/V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-1.htm" title="推荐机场 | 9月1日21M/S|免费VPN/Singbox节点/Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点免费节点链接地址">推荐机场 | 9月1日21M/S|免费VPN/Singbox节点/Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-15.htm" title="推荐机场 | 8月15日18.2M/S|免费VPN/Singbox节点/Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点免费节点链接地址">推荐机场 | 8月15日18.2M/S|免费VPN/Singbox节点/Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-31.htm" title="推荐机场 | 8月31日22.3M/S|免费VPN/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址">推荐机场 | 8月31日22.3M/S|免费VPN/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-v2ray-subscribe.htm" title="推荐机场 | 8月16日20.7M/S|免费VPN/Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点链接地址">推荐机场 | 8月16日20.7M/S|免费VPN/Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-22-node-share.htm" title="推荐机场 | 8月22日18.8M/S|免费VPN/SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点链接地址">推荐机场 | 8月22日18.8M/S|免费VPN/SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-2026-8-23.htm" title="推荐机场 | 8月23日19.4M/S|免费VPN/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点免费节点链接地址">推荐机场 | 8月23日19.4M/S|免费VPN/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-high-speed-nodes.htm" title="推荐机场 | 8月8日20.5M/S|免费VPN/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点免费节点链接地址">推荐机场 | 8月8日20.5M/S|免费VPN/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-v2ray-subscribe.htm" title="推荐机场 | 8月18日19.7M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点免费节点链接地址">推荐机场 | 8月18日19.7M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-21.htm" title="推荐机场 | 8月21日18.6M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址">推荐机场 | 8月21日18.6M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-26-free-subscribe-node.htm" title="推荐机场 | 8月26日22.2M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点链接地址">推荐机场 | 8月26日22.2M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -391,10 +391,10 @@ A4: 包括Shadowsocks、Vmess、HTTP、SOCKS5等，支持丰富多样，满足�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
